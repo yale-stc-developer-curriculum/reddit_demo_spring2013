@@ -30,7 +30,7 @@ This assignment is due **April 5th**, but I ask that you check in one week befor
 ## Feature Requirements
 
 1. A relatively nice style, nothing fancy, but at least something more than the default stlying you get out of the box.) I suggest you use Twitter Bootstrap (see Chapter 5 of the Rails Tutorials Book).
-2. The application should support users (including signing up, logging in/out, and the following attributes: name, email)
+2. The application should support users, including signing up, logging in/out, and the following attributes: name, email
 3. Users should be able to create and view posts. Posts have a title, a link, and an optional description.
 4. The home page should show a list of the top 20 posts (in terms of # of upvotes).
 5. Users should be able to upvote or downvote posts. (no more than once per post per user)
@@ -42,6 +42,7 @@ This assignment is due **April 5th**, but I ask that you check in one week befor
 ## Tips
 
 * Worth repeating: When the tutorial doesn't cover something, check the [Rails Tutorial](http://ruby.railstutorial.org/chapters), [Rails Guides](http://guides.rubyonrails.org), and search the web. If you're still stuck, ask on Piazza (that's totally encouraged!) You can even ask anonymously if you want.
+* For creating the **post** model, you can use the scaffold generator, but I think you'll learn more if you do it by hand this time.
 * For feature #5 (up/downvotes), there are a number of ways of modeling this. I suggest creating one 'vote' model, which has attributes for whether it's up or down, what post it's for (`post_id`), and what user created it (`user_id`). You're welcome to experiment with other approaches.
 * In terms of Rails model relationships, here's how I'd go about it (you can try something else, though):
     * **Post** `belongs_to :user`, `has_many :comments`, and `has_many :votes`
