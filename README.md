@@ -1,6 +1,6 @@
 # Assignment 3
 
-Your task for assignment #3 is to take this shell of an application and expand it with the basic functionality of a reddit-type site. Once you complete this assignment, you'll have pretty much all the skills needed to build a basic web-application (the only thing missing will be a 'modern' javascript UI).
+Your task for assignment #3 is to take this shell of an application (which we created in class week #3) and expand it with the basic functionality of a reddit-type site. Once you complete this assignment, you'll have pretty much all the skills needed to build a basic web-application (the only thing missing will be a 'modern' javascript UI).
 
 This assignment is pretty long and complicated (by design). If you feel like this assignement is too hard, that's ok! Please get in touch, and I'll work with you if you need more time, more guidance, etc.
 
