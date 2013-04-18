@@ -7,6 +7,9 @@ gem 'rails', '3.2.12'
 
 gem 'sqlite3'
 
+gem 'rubycas-client-rails'
+gem 'rubycas-client', '2.2.1'
+
 
 # Gems used only for assets and not required
 # in production environments by default.

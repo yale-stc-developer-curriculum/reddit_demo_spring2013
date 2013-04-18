@@ -58,5 +58,7 @@ module RedditDemo
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    config.rubycas.cas_base_url = 'https://secure.its.yale.edu/cas/'
   end
 end

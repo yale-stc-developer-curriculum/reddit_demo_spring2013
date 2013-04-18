@@ -1,6 +1,10 @@
 <%= form_for(@user) do |f| %>
 
 <p>
+  <%= f.label :netid %><br />
+  <%= f.text_field :netid, value: session[:cas_user] %>
+</p>
+<p>
   <%= f.label :name %><br />
   <%= f.text_field :name %>
 </p>
@@ -10,4 +14,3 @@
 </p>
   <%= f.submit %>
 <% end %>
-  

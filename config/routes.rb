@@ -9,5 +9,5 @@ RedditDemo::Application.routes.draw do
 
 
   resources :users
-  root to: 'users#index'
+  root to: 'posts#index'
 end
