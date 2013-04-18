@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    @posts = Post.all.sort_by{|post| post.vote_count }.reverse[0..19]
 
     respond_to do |format|
       format.html # index.html.erb
@@ -79,5 +79,21 @@ class PostsController < ApplicationController
       format.html { redirect_to posts_url }
       format.json { head :no_content }
     end
+  end
+
+  def upvote
+    create_vote(1, params[:id], current_user.id)
+    redirect_to :back
+  end
+
+  def downvote
+    create_vote(-1, params[:id], current_user.id)
+    redirect_to :back
+  end
+
+  private
+  def create_vote(value, post_id, user_id)
+    vote = Vote.new(user_id: user_id, post_id: post_id, value: value)
+    vote.save
   end
 end

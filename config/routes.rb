@@ -1,13 +1,16 @@
 RedditDemo::Application.routes.draw do
-  resources :votes
-
-
   resources :comments
 
-
-  resources :posts
+  resources :posts do
+    member do
+      get 'upvote'
+      get 'downvote'
+    end
+  end
 
 
   resources :users
+
   root to: 'posts#index'
+
 end
