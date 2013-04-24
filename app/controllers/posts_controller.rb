@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all.sort_by{|post| post.vote_count }.reverse[0..19]
+    @posts = Post.all.sort_by(&:vote_count).reverse[0..19]
 
     respond_to do |format|
       format.html # index.html.erb
